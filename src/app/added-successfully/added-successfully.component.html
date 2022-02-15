@@ -1,0 +1,64 @@
+<body style=" overflow: hidden;">
+    <div class="row" >
+        <img src='.\assets\Images\addedsuccessfully1.png'  style=" height: 50px; width: 100%; align-content: center;"/>
+    </div>
+    <div style="text-align: middle ; background-image: url('/assets/Images/cart.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;position: relative;height: 95%">
+        <div style="margin-left: 8%;">
+        <br>
+        <br>
+        <h1 style="font-weight: bolder; font-size: 30px; color:rgb(22, 185, 57) ">Cart Details</h1>
+        <br>
+        
+        <dl class="row">
+            <dt class="col-sm-2">
+                Cart&nbsp;Id
+            </dt>
+            <dd class="col-sm-10">
+                {{cartID}}
+            </dd>
+            <dt class="col-sm-2">
+                Customer&nbsp;Name
+            </dt>
+            <dd class="col-sm-10">
+                {{userName}}
+            </dd>
+            <dt class="col-sm-2">
+                Product&nbsp;Name
+            </dt>
+            <dd class="col-sm-10">
+                {{product.name}}
+            </dd>
+            <dt class="col-sm-2">
+                Vendor Name
+            </dt>
+            <dd class="col-sm-10">
+                {{vendor.name}}
+            </dd>
+            <dt class="col-sm-2">
+                Delivery Charge
+            </dt>
+            <dd class="col-sm-10">
+                {{vendor.deliveryCharge}}
+            </dd>
+            <dt class="col-sm-2">
+               Zipcode
+            </dt>
+            <dd class="col-sm-10">
+               {{cart.zipcode}}
+            </dd>
+            <dt class="col-sm-2">
+                Delivery&nbsp;Date
+            </dt>
+            <dd class="col-sm-10">
+                {{cart.deliveryDate}}
+            </dd>
+        </dl>
+        <br>
+        <div>
+            <a class="btn" style="background-color: orange; color: white; font-size: 20px;" routerLink="/addrating/{{product.id}}">Add Rating</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn" style="background-color: #3ca9d4; color: white; font-size: 20px;" routerLink="/products">Continue Shoping</a>
+        
+        </div>
+    </div>
+    </div>
+    </body>

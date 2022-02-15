@@ -1,0 +1,19 @@
+.customAtag{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.changed{
+    color: gold;
+}
+.card{
+    position: relative;
+}
+.align-bottom{
+    position: absolute;
+    bottom: 2px;
+    right: 20px;
+}
+.align-bottom a{
+    margin-bottom: 5px;
+}

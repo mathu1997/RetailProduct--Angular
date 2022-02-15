@@ -1,0 +1,46 @@
+<app-header></app-header>
+<!-- <app-carousel></app-carousel> -->
+<style>
+    .inputUnderline{
+        outline: none;
+        border: none;
+        border-bottom: 2px solid violet;
+    }
+    .customAtag{
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+    .changed{
+        color: gold;
+    }
+    .card{
+        position: relative;
+    }
+    .align-bottom{
+        position: absolute;
+        bottom: 2px;
+        right: 20px;
+    }
+    .align-bottom a{
+        margin-bottom: 5px;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+    <div class="m-3">
+        <input type="text" class="p-3 inputUnderline"  [ngModel]="Search" (ngModelChange)=onSearchChange($event) placeholder="Search By Name">
+        <a  style="margin-right: 40px;"><img src="../assets/Images/searching.png" width="40" height="40" class="img-fluid"></a>
+        <input type="text" class="p-3 inputUnderline"  [ngModel]="Search" (ngModelChange)=onSearchId($event) placeholder="Search By ID">
+        <a  style="margin-right: 40px;"><img src="../assets/Images/searching.png" width="40" height="40" class="img-fluid"></a>
+    </div>
+    <div class="row w-100">
+        <div *ngFor="let product of pservice" class="col-lg-3 col-md-3 col-sm-6 p-3 m-3 card-group" >
+            <app-product [product]="product"></app-product>
+        </div>
+        <div>
+            <p style="font-size: large;font-weight: bold;">{{errmsg}}</p>
+        </div>
+    </div>
+</div>

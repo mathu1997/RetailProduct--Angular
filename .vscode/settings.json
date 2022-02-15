@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/356d4cfc-3410-42bd-9760-08eab223fff6/resourceGroups/AzureDemo/providers/Microsoft.Web/sites/RetailProduct",
+    "appService.deploySubpath": "."
+}

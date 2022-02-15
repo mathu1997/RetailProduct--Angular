@@ -1,0 +1,90 @@
+<app-header></app-header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .changed{
+        color: gold;
+    }
+    .inputUnderline{
+        outline: none;
+        border: none;
+        border-bottom: 2px solid blue;
+    }
+    
+</style>
+<div class="row m-3">
+    <div class="col-lg-6">
+        <div  class="d-flex justify-content-center">
+            <img class="card-img-top" [src]="product.imageName" style="height: 400px;" class="img-fluid rounded mx-auto d-block"   alt="Card image cap">
+        </div> 
+        <div class="row">
+            <div class="col-lg-6">
+                <div *ngIf="stock.stockInHand<=0; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock><button disabled (click)="onCreateCart()"  class="btn btn-danger w-100" style="padding: 10px; margin: 10px 0; font-size: larger;" >
+                    <span style="margin-right: 10px;"><i class="fa fa-shopping-cart">&nbsp;</i>
+                    </span>
+                    Add&nbsp;Cart
+                </button></ng-template>
+                <ng-template #elseBlock><button (click)="onCreateCart()" routerLink="/add/cart/{{product.id}}" class="btn btn-primary w-100" style="padding: 10px; margin: 10px 0; font-size: larger;" >
+                    <span style="margin-right: 10px;"><i class="fa fa-shopping-cart">&nbsp;</i>
+                    </span>
+                    Add&nbsp;Cart
+                </button></ng-template>
+                
+            </div>
+            <div class="col-lg-6">
+                <button (click)="onCreateCart()" routerLink="/addtowishlist/{{product.id}}" class="btn btn-warning w-100" style="padding: 10px; margin: 10px 0; font-size: larger;" >
+                    <span style="margin-right: 10px;">
+                        <i class="fa fa-shopping-cart">&nbsp;</i>
+                    </span>
+                    Add&nbsp;WishList
+                </button>
+            </div>
+            
+        </div>
+        <!-- <div class="">
+            <a href="#" class="btn btn-success" 
+            style="background-color: #07bc4c; color: white;">Buy&nbsp;now!</a>
+        </div> -->
+    </div>
+    <div class="col-lg-6">
+        <h1 class="card-title">{{product.name}}</h1>
+        <p class="card-text d-lg-block d-md-none"> {{product.description}} </p>
+        <p><span class="btn btn-success" style="margin-right: 10px;">{{product.rating}} 
+                <span class="fa fa-star"></span> 
+            </span> 
+            <span *ngFor="let star of getStars(product.rating)" class="fa fa-star {{star}}"></span>
+        </p>  
+        <p *ngIf="stock.stockInHand<=0" style="font-weight: bold; font-size: larger;">₹{{product.price}}
+            <span class="m-3 p-2 text-danger border border-danger">Out of Stock</span>
+        </p>  
+        <p *ngIf="stock.stockInHand>0" style="font-weight: bold; font-size: larger;">₹{{product.price}}
+            <span class="m-3 p-2 text-success border border-success">In Stock</span>
+        </p>
+        <br/>
+        <div class="row m-3">
+            <div class="col-lg-12" style="font-weight: bold;">
+                Available offers
+            </div>
+            <ul>
+                    <li>Bank Offer10% off on ICICI Bank Credit Cards, up to ₹1500. On orders of ₹5000 and aboveT&C</li>
+
+                    <li>Bank Offer7% off on HDFC Bank Debit Cards, up to ₹500. On orders of ₹5000 and aboveT&C</li>
+                    
+                    <li>Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C</li>
+                    
+                    <li>Partner OfferPurchase select Tablets and get Edukemy’s Neev course worth ₹4999, for freeKnow More</li>
+            </ul>
+
+        </div>
+        
+        
+        <div class="row m-3">
+            <div class="col-md-2">
+                <p class="text-muted">Seller</p>
+            </div>
+            <div class="col-md-6">
+                <p class="text-primary">{{vendor.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

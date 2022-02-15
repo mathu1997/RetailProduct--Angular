@@ -1,0 +1,42 @@
+.container-fluid{
+    background-color:rgba(209,228,243,255);
+    width: 350px;
+    height: 580px;
+    margin-left: 2%;
+}
+h1
+{
+
+ font-size: 40px;
+ font-weight: bolder; 
+ color: rgb(38, 9, 112);;
+ text-align: center;
+}
+.form-control
+{
+ width: 300px;
+
+}
+label{
+    width: 700px;
+ font-size: 20px;
+ color: rgb(6, 79, 148);
+}
+img{
+ width: auto; 
+ height: auto;
+}
+button{
+    color:white;
+    width:170px;
+}
+.main-div {
+    background-image: url('/assets/Images/addtocart2.png');
+    background-repeat: no-repeat;
+     background-size: cover;
+     
+  } 
+  .heading{
+      margin-top: 30px;
+      width: 300px;
+  }

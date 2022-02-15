@@ -1,0 +1,24 @@
+<div fxLayoutAlign=" centre centre" fxFlexFill class="main-div"  >
+  <form #ratingForm="ngForm" (ngSubmit)="onSubmitCart(ratingForm)" style="color: rgb(82, 101, 156); font-weight: bolder;" class="container">
+    <h1 style="font-weight: 900;">Rating</h1>
+         
+    <div class="form-group ">
+      <label class="control-label ">Product Name</label>
+      <input class="form-control" [value]="product.name" name="product" readonly  />
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="rate" class="form-range">Rating</label> 
+  
+      <input type="range" class="form-range" min="1" max="5" step="1"  id="myRange" #rating="ngModel" name="Rating" [value]="3" ngModel required >
+      <small style="color: orange;">1star&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2stars</small>
+      <small style="color: orange;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3stars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4stars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5stars</small>
+      </div>
+     
+     
+    <div *ngIf="rating.valid; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock><input type="submit" value="Add Rating" class="btn btn-info"/></ng-template>
+    <ng-template #elseBlock><button class="btn btn-info" onclick="getElementById('demo').innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rating is Required'">Add Rating</button> <br> 
+        <p id="demo" class="text-danger"></p></ng-template>
+  </form>    
+</div>

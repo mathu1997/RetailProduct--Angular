@@ -1,0 +1,21 @@
+<ngb-carousel
+[showNavigationArrows]="false" 
+[showNavigationIndicators]="false"
+[interval]="3000"
+[keyboard]="true"
+[pauseOnHover]="false"
+[wrap]="true"
+[activeId]="'secondSlide'"
+>
+  <ng-template ngbSlide id="firstSlide">
+    <div class="picsum-img-wrapper">
+      <img src=".\assets\Images\iphone.jpg" alt="Angular Carousel 1">
+    </div>
+    
+  </ng-template>
+  <ng-template ngbSlide id="secondSlide">
+    <div class="picsum-img-wrapper">
+      <img src=".\assets\Images\oneplus-Watch.jpg" alt="Angular Carousel 2">
+    </div>
+  </ng-template>
+</ngb-carousel>

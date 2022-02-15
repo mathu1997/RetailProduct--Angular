@@ -1,0 +1,26 @@
+<div class="bg-primary fixed-top">
+
+  <nav class="navbar navbar-expand-md  navbar-dark bg-primary container" >
+      <a class="navbar-brand" href="#"><span>S</span>outhmarket</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" routerLinkActive="active" routerLink="/products">Product</a>
+          
+        </div>
+        <div class="navbar-nav d-flex w-100  justify-content-end">
+          
+          <h1 style="color: white; margin-top: 10px ;">Welcome back {{userName}}!! &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</h1>
+       
+        
+          <button class="nav-item nav-link btn btn-primary" class="btnlogout" style="margin-left: 0px;" routerLinkActive="active"  (click)="logout()">Logout</button>
+        </div>
+      </div>
+    </nav>
+    
+</div>
+  <div style="margin-top: 100px;">
+    <router-outlet></router-outlet>
+  </div>

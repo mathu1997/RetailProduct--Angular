@@ -1,0 +1,8 @@
+.btnlogout{
+    border-radius: 12px;
+    background-color: red;
+    padding-left: 5px;
+    padding: 5px 15px;
+    font-size: 30px;
+    color: white;
+}

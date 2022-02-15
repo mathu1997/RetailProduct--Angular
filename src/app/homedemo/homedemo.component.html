@@ -1,0 +1,41 @@
+<div class="full-screen">
+    <br>
+    <div class="container">
+        <h1>
+      <span class="heading" style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to South market&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <button class='btn  pull-right'  style=" background-color: blue;
+      color: white; 
+      border-radius: 12px;
+      padding: 14px 40px;
+      font-size: 30px;" routerLink="/login">Login</button>
+    </h1>
+    </div>
+<div class="container mt-8" >
+    <ngb-carousel
+    [showNavigationArrows]="false" 
+    [showNavigationIndicators]="false"
+    [interval]="4000"
+    [keyboard]="true"
+    [pauseOnHover]="false"
+    [wrap]="true"
+    [activeId]="'secondSlide'"
+    >>
+      <ng-template ngbSlide data-interval="500">
+        <div class="img-block">
+          <img src=".\assets\Images\iphone.jpg" alt="Img 1">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="img-block">
+          <img src=".\assets\Images\oneplus-Watch.jpg" alt="Img 2">
+        </div> 
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="img-block">
+          <img src=".\assets\Images\lap2forslide.jpg" alt="Img 3">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  
+  </div>
+</div>

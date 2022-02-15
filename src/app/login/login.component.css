@@ -1,0 +1,39 @@
+.main-div mat-card{
+    padding: 0px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.login-form{
+    padding: 20px;
+}
+.mat-toolbar.mat-primary{
+    background-color:#3ca9d4;
+}
+.main-div{
+    background-image: url('/assets/Images/loginback.jpg');
+    background-repeat: no-repeat;
+     background-size: cover;
+}
+button {
+    display: block;
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(to right, rgb(0, 66, 249) 0%, rgb(24, 184, 247) 100%);
+    background: -webkit-linear-gradient(left, rgb(0, 46, 249) 0%, rgb(24, 214, 247) 100%);
+    margin-bottom: 25px;
+    margin-top: 20px;
+    height: 40px;
+}
+.heading{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+margin-top: 20px;
+    position:absolute;
+    color: white;
+    border-radius: 2px;
+    border: 15px solid rgb(161, 157, 157);
+height: 60px;
+    background-color:rgb(161, 157, 157);
+    border-radius: 6px;  
+}

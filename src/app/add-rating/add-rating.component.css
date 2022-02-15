@@ -1,0 +1,62 @@
+.main-div {
+    background-image: url('/assets/Images/addrating.png');
+    background-repeat: no-repeat;
+     background-size: cover;
+     
+  }   
+ .container {
+    position: left;
+    right: 0;
+    margin-top: 60px;
+    margin-left: 40px;
+    max-width: 300px;
+    max-height: 45%;
+    padding: 20px;
+    background-color:white;
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px  #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color:rgb(82, 101, 156);  
+  }
+  .btn {
+    background-color: rgb(51, 184, 51);
+
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 70px;
+    margin-top: 30px;
+    width: 50%;
+    opacity: 0.9;
+    border-radius: 4px;  
+  } 
+  .btn:hover {
+    opacity: 1;
+  }
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    color:rgb(82, 101, 156);
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+
+
+
+
+
+  

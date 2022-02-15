@@ -1,0 +1,45 @@
+.full-screen {
+    width: auto;
+    height: auto;
+    background-color:black;
+  }
+  .heading{
+    text-align: center;
+
+    margin-top: 10px;
+    font-size: 50px;
+    color:white ;
+    
+    margin: 0;
+    
+  }
+  .img-block{
+    margin-left: 4%;
+    width: auto;
+    height: auto;
+  }
+  .carousel-inner > .item {
+    position: relative;
+    display: none;
+    -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+.button{
+  background-color: blue;
+ color: white; 
+ border-radius: 12px;
+ padding: 14px 40px;
+ font-size: 30px;
+ 
+ margin-left: 83%;
+} 
+.shopname{
+ 
+  font-size: 50px;
+  color:white ;
+}
+
+
+    

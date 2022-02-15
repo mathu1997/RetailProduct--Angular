@@ -1,0 +1,31 @@
+.panel{
+    margin-top: 15%;
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 450px;
+    height: 150px;
+    margin-left: 500px;
+    font-size: 30px;
+    border-radius: 10px;
+    
+  }
+  .panel-body{
+      font-size: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      text-align: center;
+      
+  }
+  .panel-heading{
+      background-color:#2a7697;
+      border-radius: 10px;
+      text-align: center;
+      color:white;
+  }
+  .main-div {
+    
+    background-image: url('/assets/Images/addbg.jpg');
+    background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;   
+  }

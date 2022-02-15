@@ -1,0 +1,44 @@
+<div fxLayoutAlign=" centre centre" fxFlexFill class="main-div"  >
+<div class="container-fluid mb-5" > 
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <div class="row">
+    <div class="col-4">
+        <br>
+        <h1 class="heading">  Add To Cart</h1>
+        <br>
+        <form #userForm="ngForm" (ngSubmit)="onSubmitCart(userForm)">
+            <div class="form-group ">
+                <label class="control-label ">Product Name</label>
+                <input class="form-control" readonly [value]="product.name" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="control-label">Customer Name</label>
+                <input class="form-control" readonly  [value]="userName"/>
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="control-label">ZipCode</label>
+                <input  type="test" #zipcode="ngModel" required pattern="[0-9]{6}" [class.is-invalid]="zipcode.invalid && zipcode.touched" class="form-control"  name="ZipCode" ngModel/>
+                <div *ngIf="zipcode.errors && (zipcode.invalid || zipcode.touched)">
+                    <small class="text-danger" *ngIf="zipcode.errors.required &&zipcode.touched">ZipCode is Required</small>
+                    <small class="text-danger" *ngIf="zipcode.errors.pattern">ZipCode must be 6 Digits</small>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="control-label">Delivery Date</label>
+                <input type="date" class="form-control" #deliverydate="ngModel" required style="width: 300px;" name="DeliveryDate" ngModel/>
+            </div>
+            <br>
+            <div *ngIf="zipcode.valid && deliverydate.valid; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock><input type="submit" value="Add to Cart" class="btn btn-info"/></ng-template>
+                <ng-template #elseBlock><button class="btn btn-info" onclick="getElementById('demo').innerHTML='ZipCode & Delivery Date are Required'">Add To Cart</button> <br> 
+                    <br><p id="demo" class="text-danger"></p></ng-template>
+        </form>
+        </div>
+          
+        </div>
+       
+</div>
+</div>
